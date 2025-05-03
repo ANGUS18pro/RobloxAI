@@ -1,13 +1,12 @@
-{
-  "name": "roblox-bot",
-  "version": "1.0.0",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "axios": "^1.5.0",
-    "cors": "^2.8.5",
-    "express": "^4.18.2"
-  }
-}
+const express = require('express');
+const app = express();
+
+const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.send('¡Hola desde RobloxAI!');
+});
+
+app.listen(PORT, () => {
+  console.log(`Servidor escuchando en el puerto ${PORT}`);
+});
